@@ -133,7 +133,7 @@ seccion = st.sidebar.radio(
 # =================================================================
 # 0. PORTADA
 # =================================================================
-if seccion == "0. Portada":
+if seccion == "Portada":
     st.title("Agente de IA para el Índice de Bienestar Estudiantil")
     st.subheader("Universidad Santo Tomás · Continuación del proyecto de Índice de Felicidad")
 
@@ -156,7 +156,7 @@ if seccion == "0. Portada":
 # =================================================================
 # 1. ¿QUÉ ES UN AGENTE DE IA? — sección conceptual profunda
 # =================================================================
-elif seccion == "1. ¿Qué es un agente de IA?":
+elif seccion == "¿Qué es un agente de IA?":
     st.title("1. ¿Qué es un agente de IA?")
     st.caption("Los conceptos que sostienen todo lo demás en esta presentación")
 
@@ -319,7 +319,7 @@ elif seccion == "1. ¿Qué es un agente de IA?":
 # =================================================================
 # 2. DATOS E INFORMACIÓN DEL ESTUDIO
 # =================================================================
-elif seccion == "2. Datos e información del estudio":
+elif seccion == "Datos e información del estudio":
     st.title("2. Datos e información del estudio")
 
     c1, c2 = st.columns(2)
@@ -382,7 +382,7 @@ elif seccion == "2. Datos e información del estudio":
 # =================================================================
 # 3. QUÉ HACE EL AGENTE — mirada de estadístico
 # =================================================================
-elif seccion == "3. Qué hace el agente":
+elif seccion == "Qué hace el agente":
     st.title("3. Qué hace el agente")
     st.caption("Medidas y estudios estadísticos que ejecuta")
 
@@ -476,7 +476,7 @@ elif seccion == "3. Qué hace el agente":
 # =================================================================
 # 4. CÓMO FUNCIONA EL AGENTE — visual
 # =================================================================
-elif seccion == "4. Cómo funciona el agente":
+elif seccion == "Cómo funciona el agente":
     st.title("4. Cómo funciona el agente")
     st.caption("La aplicación concreta, en esta USTA, de los conceptos de la sección 1")
 
@@ -552,7 +552,7 @@ elif seccion == "4. Cómo funciona el agente":
 # =================================================================
 # 5. RESULTADOS QUE MUESTRA
 # =================================================================
-elif seccion == "5. Resultados que muestra":
+elif seccion == "Resultados que muestra":
     st.title("5. Resultados que muestra el agente")
     st.caption("El resultado final siempre es un informe con el análisis del agente de IA")
 
@@ -598,7 +598,7 @@ elif seccion == "5. Resultados que muestra":
 # =================================================================
 # 6. RIESGOS
 # =================================================================
-elif seccion == "6. Riesgos":
+elif seccion == "Riesgos":
     st.title("6. Riesgos")
 
     riesgos = [
@@ -676,7 +676,7 @@ elif seccion == "6. Riesgos":
 # =================================================================
 # 7. DIFERENCIAL Y PRÓXIMOS PASOS
 # =================================================================
-elif seccion == "7. Diferencial y próximos pasos":
+elif seccion == "Diferencial y próximos pasos":
     st.title("7. Diferencial y próximos pasos")
 
     st.markdown("### ¿En qué se diferencia este agente de un chatbot común?")
@@ -717,7 +717,7 @@ elif seccion == "7. Diferencial y próximos pasos":
 # =================================================================
 # 8. ENTORNO Y HERRAMIENTAS DE TRABAJO
 # =================================================================
-elif seccion == "8. Entorno y herramientas de trabajo":
+elif seccion == "Entorno y herramientas de trabajo":
     st.title("8. Entorno y herramientas de trabajo")
 
     st.markdown("### Dónde vive el proyecto")
