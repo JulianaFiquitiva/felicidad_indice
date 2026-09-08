@@ -118,15 +118,15 @@ st.sidebar.caption("Universidad Santo Tomás · Consultoría e Investigación")
 seccion = st.sidebar.radio(
     "Navegación",
     [
-        "0. Portada",
-        "1. ¿Qué es un agente de IA?",
-        "2. Datos e información del estudio",
-        "3. Qué hace el agente",
-        "4. Cómo funciona el agente",
-        "5. Resultados que muestra",
-        "6. Riesgos",
-        "7. Diferencial y próximos pasos",
-        "8. Entorno y herramientas de trabajo",
+        "Portada",
+        "¿Qué es un agente de IA?",
+        "Datos e información del estudio",
+        "Qué hace el agente",
+        "Cómo funciona el agente",
+        "Resultados que muestra",
+        "Riesgos",
+        "Diferencial y próximos pasos",
+        "Entorno y herramientas de trabajo",
     ],
 )
 
