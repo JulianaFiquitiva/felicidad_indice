@@ -136,7 +136,6 @@ if parte == "Parte 1 · El agente de IA":
         "Sección",
         [
             "Inicio",
-            "¿Qué es un agente de IA?",
             "Qué incluye el agente",
             "El proceso que se quiere desarrollar",
             "Cómo se presenta: el dashboard",
