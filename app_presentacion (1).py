@@ -145,11 +145,11 @@ else:
     seccion = st.sidebar.radio(
         "Sección",
         [
-            "5. La pregunta de investigación",
-            "6. El estudio que se hizo",
-            "7. Resumen de los datos y evaluación",
-            "8. Objetivos",
-            "9. Estado del arte",
+            "La pregunta de investigación",
+            "El estudio que se hizo",
+            "Resumen de los datos y evaluación",
+            "Objetivos",
+            "Estado del arte",
         ],
     )
 
