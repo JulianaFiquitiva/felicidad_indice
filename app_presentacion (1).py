@@ -7,7 +7,7 @@ Ejecutar con:  streamlit run app_presentacion.py
 import streamlit as st
 
 st.set_page_config(
-    page_title="Agente IA - Índice de Bienestar Estudiantil USTA",
+    page_title="Bienestar Estudiantil USTA",
     page_icon="📊",
     layout="wide",
 )
