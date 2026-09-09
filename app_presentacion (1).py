@@ -122,7 +122,7 @@ def dash_card(title, items):
 # ---------------------------------------------------------------
 # SIDEBAR — DOS PARTES SEPARADAS
 # ---------------------------------------------------------------
-st.sidebar.title("📊 Agente IA — Bienestar Estudiantil")
+st.sidebar.title("📊 Bienestar Estudiantil")
 st.sidebar.caption("USTA · Consultoría e Investigación · Prof. Javier Mauricio Sierra")
 
 parte = st.sidebar.radio(
@@ -135,11 +135,11 @@ if parte == "Parte 1 · El agente de IA":
     seccion = st.sidebar.radio(
         "Sección",
         [
-            "0. Portada",
-            "1. ¿Qué es un agente de IA?",
-            "2. Qué incluye el agente",
-            "3. El proceso que se quiere desarrollar",
-            "4. Cómo se presenta: el dashboard",
+            "Inicio",
+            "¿Qué es un agente de IA?",
+            "Qué incluye el agente",
+            "El proceso que se quiere desarrollar",
+            "Cómo se presenta: el dashboard",
         ],
     )
 else:
@@ -158,7 +158,7 @@ else:
 # PARTE 1 · EL AGENTE DE IA
 # =================================================================
 
-if seccion == "0. Portada":
+if seccion == "Inicio":
     st.title("Agente de IA para el Índice de Bienestar Estudiantil")
     st.subheader("Universidad Santo Tomás · Herramienta de apoyo a la toma de decisiones institucional")
 
@@ -182,85 +182,8 @@ if seccion == "0. Portada":
     )
     st.info("Entrega — Materia de Consultoría e Investigación.")
 
-elif seccion == "1. ¿Qué es un agente de IA?":
-    st.title("1. ¿Qué es un agente de IA?")
-    st.caption("Los conceptos que sostienen todo lo demás en esta parte")
-
-    st.markdown("## 1.1 Definición")
-    st.markdown(
-        """
-        Un **agente de IA** es un sistema que, a diferencia de un modelo de
-        lenguaje (LLM) usado de forma aislada, no solo **genera texto**: es
-        capaz de **percibir** una tarea o pregunta, **razonar** sobre qué
-        pasos seguir, **actuar** usando herramientas externas (código,
-        datos), **observar** el resultado, y **decidir si necesita otro
-        paso o ya puede responder**. Es un sistema con **autonomía
-        acotada**: decide *cómo* resolver el problema dentro de reglas que
-        no puede romper.
-
-        La diferencia con un chatbot común no es de "inteligencia", es de
-        **arquitectura**: un chatbot responde con lo que el modelo genera a
-        partir de su entrenamiento; un agente **ejecuta cosas reales** para
-        producir la respuesta.
-        """
-    )
-
-    st.markdown("## 1.2 El ciclo de un agente: percibir → razonar → actuar → observar")
-    flow_diagram(
-        [
-            ("👁️ Percibe", "la pregunta o tarea"),
-            ("🧠 Razona", "planifica qué hacer"),
-            ("🛠️ Actúa", "ejecuta una herramienta"),
-            ("🔎 Observa", "revisa el resultado obtenido"),
-            ("🔁 Repite o<br>responde", "si falta info, otro ciclo"),
-        ],
-        style="loop",
-    )
-    st.markdown(
-        "Este patrón (**ReAct** — *Reasoning + Acting*) es lo que le "
-        "permite a un agente encadenar varios pasos sin que el usuario "
-        "tenga que pedir cada uno por separado."
-    )
-
-    st.markdown("## 1.3 Tool calling / function calling")
-    st.markdown(
-        """
-        Es el mecanismo que permite que un LLM **invoque código externo de
-        forma estructurada**: recibe una lista de "herramientas
-        disponibles", y cuando detecta que una pregunta requiere una de
-        ellas, genera una instrucción estructurada para ejecutarla. El
-        resultado —ya calculado por Python— se le devuelve al modelo para
-        que lo interprete y lo redacte. **El modelo nunca "calcula": solo
-        pide que se calcule.**
-        """
-    )
-
-    st.markdown("## 1.4 Chatbot simple vs. Agente de IA")
-    st.markdown(
-        """
-        | | Chatbot simple (LLM aislado) | Agente de IA (este proyecto) |
-        |---|---|---|
-        | **Fuente de la respuesta** | Lo que el modelo "recuerda" de su entrenamiento | Cálculo real sobre el dataset de la USTA |
-        | **Acceso a datos propios** | No tiene acceso al dataset real | Sí, mediante herramientas conectadas al dataset |
-        | **Cálculo numérico** | Lo genera el modelo (riesgo de alucinación) | Lo hace código Python determinista y auditable |
-        | **Pasos múltiples** | Responde en un solo paso | Encadena pasos: explorar → replicar → modelar → mostrar |
-        | **Trazabilidad** | No explica cómo llegó al número | Registra dataset, método y parámetros usados |
-        """
-    )
-
-    st.markdown("## 1.5 ¿Por qué SÍ es un agente y no un script con IA por encima?")
-    st.markdown(
-        """
-        1. **Autonomía de decisión** — decide qué método estadístico usar
-           según los datos, no sigue un guion fijo.
-        2. **Uso de herramientas** — ejecuta código real, no solo genera texto.
-        3. **Encadenamiento de pasos con verificación** — explora, replica,
-           modela y solo entonces muestra el resultado en el dashboard.
-        """
-    )
-
-elif seccion == "2. Qué incluye el agente":
-    st.title("2. Qué incluye el agente")
+elif seccion == "Qué incluye el agente":
+    st.title("Qué incluye el agente")
     st.caption("Componentes, insights de IA aplicados y arquitectura por capas")
 
     st.markdown("### Los insights de IA que se aplican a este agente")
@@ -346,8 +269,8 @@ elif seccion == "2. Qué incluye el agente":
         "el riesgo de confidencialidad de usar un modelo externo."
     )
 
-elif seccion == "3. El proceso que se quiere desarrollar":
-    st.title("3. El proceso que se quiere desarrollar")
+elif seccion == "El proceso que se quiere desarrollar":
+    st.title("El proceso que se quiere desarrollar")
     st.caption("De los datos crudos al dashboard, paso a paso")
 
     flow_diagram(
@@ -387,8 +310,8 @@ elif seccion == "3. El proceso que se quiere desarrollar":
         """
     )
 
-elif seccion == "4. Cómo se presenta: el dashboard":
-    st.title("4. Cómo se presenta: el dashboard")
+elif seccion == "Cómo se presenta: el dashboard":
+    st.title("Cómo se presenta: el dashboard")
     st.caption("Todo el análisis se entrega de forma ilustrativa, no como texto suelto")
 
     st.markdown(
@@ -454,8 +377,8 @@ elif seccion == "4. Cómo se presenta: el dashboard":
 # PARTE 2 · EL PROYECTO
 # =================================================================
 
-elif seccion == "5. La pregunta de investigación":
-    st.title("5. La pregunta de investigación")
+elif seccion == "La pregunta de investigación":
+    st.title("La pregunta de investigación")
     st.caption("Todo el proyecto existe para responder esto con estadística, no solo para auditar el pasado")
 
     st.markdown(
@@ -506,8 +429,8 @@ elif seccion == "5. La pregunta de investigación":
         """
     )
 
-elif seccion == "6. El estudio que se hizo":
-    st.title("6. El estudio que se hizo")
+elif seccion == "El estudio que se hizo":
+    st.title("El estudio que se hizo")
     st.caption("Explicación del estudio anterior, base sobre la que se construye este proyecto")
 
     col1, col2 = st.columns(2)
@@ -563,8 +486,8 @@ elif seccion == "6. El estudio que se hizo":
         """
     )
 
-elif seccion == "7. Resumen de los datos y evaluación":
-    st.title("7. Resumen de los datos y evaluación")
+elif seccion == "Resumen de los datos y evaluación":
+    st.title("Resumen de los datos y evaluación")
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Respuestas válidas", "1.813")
@@ -657,8 +580,8 @@ elif seccion == "7. Resumen de los datos y evaluación":
         """
     )
 
-elif seccion == "8. Objetivos":
-    st.title("8. Objetivos")
+elif seccion == "Objetivos":
+    st.title("Objetivos")
 
     st.markdown("### Objetivo general")
     st.success(
@@ -729,8 +652,8 @@ elif seccion == "8. Objetivos":
         """
     )
 
-elif seccion == "9. Estado del arte":
-    st.title("9. Estado del arte")
+elif seccion == "Estado del arte":
+    st.title("Estado del arte")
 
     st.markdown("### La escala y el estudio base")
     st.markdown(
