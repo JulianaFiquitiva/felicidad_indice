@@ -100,10 +100,6 @@ def concept_card(title, items):
     st.markdown(html, unsafe_allow_html=True)
 
 
-def pending(text):
-    st.markdown(f'<div class="pending-card">⏳ <strong>Pendiente — no se puede responder sin abrir el dato real:</strong> {text}</div>', unsafe_allow_html=True)
-
-
 def qcard(question, answer):
     st.markdown(
         f'<div class="q-card"><div class="q-label">{question}</div>{answer}</div>',
