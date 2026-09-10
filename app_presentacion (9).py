@@ -271,24 +271,7 @@ elif seccion == "Cómo funciona el agente":
             ],
         )
 
-    st.markdown("### ¿Con qué IA, y qué pasa si falla?")
-    st.markdown(
-        """
-        El agente soporta **tres proveedores de LLM** (OpenAI, Claude o
-        Gemini) con detección automática de cuál está configurado — el
-        LLM se usa como orquestador vía API (tool calling), y nunca recibe
-        microdatos crudos, solo resultados ya agregados por el motor
-        Python.
-
-        Si **no hay ninguna clave de API configurada**, el agente no se
-        detiene: cae en un **modo de respaldo por reglas**
-        (`_fallback_plan()`) que detecta palabras clave como "género" o
-        "seccional" y decide el análisis por coincidencia de texto en vez
-        de por interpretación del LLM. Es más limitado, pero garantiza que
-        el agente siga funcionando sin depender de una API externa.
-        """
-    )
-
+    
     st.markdown("### El modelo IRT/GRM ya quedó resuelto: se hizo en Python")
     st.markdown(
         "Se implementó con la librería `girth`, con un método manual de "
